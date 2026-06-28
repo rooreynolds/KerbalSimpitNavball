@@ -97,7 +97,7 @@ void messageHandler(byte messageType, byte msg[], byte msgSize) {
       if (msgSize == sizeof(targetMessage)) {
         targetMessage targetMsg;
         targetMsg = parseMessage<targetMessage>(msg);
-        navball.set_maneuver(targetMsg.heading, targetMsg.pitch);
+        navball.set_target(targetMsg.heading, targetMsg.pitch);
       }
       break;
   }
